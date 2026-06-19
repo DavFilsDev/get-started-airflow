@@ -4,15 +4,11 @@ A minimal Apache Airflow project to help beginners install, run, and understand 
 
 This project works on Linux and provides a simple "Hello World" DAG example.
 
----
-
 # 📌 Requirements
 
 - Linux (Debian/Ubuntu recommended)
 - Python 3.10+
 - pip & venv
-
----
 
 # ⚙️ Installation (Step by Step)
 
@@ -22,8 +18,6 @@ This project works on Linux and provides a simple "Hello World" DAG example.
 sudo apt update
 sudo apt upgrade -y
 ````
-
----
 
 ## 2. Install Python tools
 
@@ -38,8 +32,6 @@ python3 --version
 pip3 --version
 ```
 
----
-
 ## 3. Clone project
 
 ```bash
@@ -47,16 +39,12 @@ git clone https://github.com/DavFilsDev/get-started-airflow.git
 cd get-started-airflow
 ```
 
----
-
 ## 4. Create virtual environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
-
----
 
 ## 5. Set Airflow home
 
@@ -66,8 +54,6 @@ This makes Airflow use this project folder:
 export AIRFLOW_HOME=$(pwd)
 echo $AIRFLOW_HOME
 ```
-
----
 
 ## 6. Install Apache Airflow
 
@@ -84,8 +70,6 @@ export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constrai
 pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 ```
 
----
-
 ## 7. Initialize database
 
 ```bash
@@ -93,8 +77,6 @@ airflow db reset
 ```
 
 Type `y` when asked.
-
----
 
 ## 8. Create admin user
 
@@ -110,15 +92,11 @@ airflow users create \
   --password admin
 ```
 
----
-
 ## 9. Run Airflow
 
 ```bash
 airflow standalone
 ```
-
----
 
 # 🌐 Access UI
 
@@ -136,7 +114,6 @@ Login:
 👉 If you don't know credentials:
 Check terminal logs after `airflow standalone`.
 
----
 
 # 📊 First DAG
 
@@ -152,8 +129,6 @@ It prints:
 Hello Airflow 👋
 ```
 
----
-
 # 🧪 How to test
 
 1. Open Airflow UI
@@ -161,5 +136,3 @@ Hello Airflow 👋
 3. Click "Trigger"
 4. Go to task logs
 5. See output
-
----
