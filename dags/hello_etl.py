@@ -15,13 +15,13 @@ with DAG(
 ) as dag:
 
     def extract():
-        print("Étape 1 : Extraction de données")
+        print("Step 1 : Data extraction")
 
     def transform():
-        print("Étape 2 : Transformation de données")
+        print("Step 2 : Data transformation")
 
     def load():
-        print("Étape 3 : Chargement des données")
+        print("Step 3 : Data loading")
 
     t1 = PythonOperator(
         task_id='extract_task',
